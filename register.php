@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="cssJquery.css">
         <script src="jquery-3.2.1.min.js"></script>
-        <script src="validated.js"></script>
+        <script src="validate.js"></script>
+        
      
     </head>
     <body>
@@ -43,8 +44,8 @@
                 </div>
 
                 <div class="Gender">
-                    <label>Gender:</label><input type="radio"  class="Gen"   value="male" name="gender"><span>Male</span>
-                    <input type="radio"  class="Gen" value="female" name="gender"><span>Female</span>
+                    <label>Gender:</label><input type="radio"  class="Gen"   value="male" name="gender" id="gender"><span>Male</span>
+                    <input type="radio"  class="Gen" value="female" name="gender" id="gender"><span>Female</span>
                     <span class="error_class" id="gendererror"></span>
                 </div>
 
