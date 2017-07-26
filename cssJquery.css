@@ -1,0 +1,92 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14 Jul, 2017, 6:27:09 PM
+    Author     : oxss
+*/
+.overall
+{
+   padding:50px;
+   width:600px;
+   border: solid white;
+   margin :auto;
+   background-color:white;
+   height:900px;
+}
+.division
+{
+   line-height:4;
+   
+}
+
+body{
+    font-family:arial; 
+    background-color:graytext;
+    color:black;
+    margin-top: 50px; 
+  
+
+}
+.error_class
+{
+ 
+   font-size: 15px;
+   font-family:sans-serif;
+   color:red;
+   display:inline-block;
+  
+  
+}
+
+header{
+    font-size: 50px;
+    font-family:sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    text-align:center;
+    padding-bottom:50px;
+    
+}
+#subspace{
+padding-bottom: 20px;
+padding-left: 150px; 
+}
+
+label
+{
+  padding-left: 30px;  
+  display:inline-block;
+  width:130;
+  text-align: left;
+}
+
+input[type=submit] {
+    width: 30%;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#tab {
+    padding-top: 80px;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #bfa4ff;
+    color: white;
+}
