@@ -11,7 +11,7 @@
     </head>
     <body>
         <header>Registration</header>
-        <form name="registration"  class="overall" method="post" action="dataBase.php">
+        <form name="registration"  class="overall" method="post" action="dataBase.php" enctype="multipart/form-data">
             
           
 
@@ -57,6 +57,11 @@
                     <textarea id="address" cols="30" rows="10" name="address"></textarea>
                     <span class="error_class" id="addresserror"> </span>
                 </div>
+                <div>
+                 <label>Profile:</label>
+                    <input type="file" name="profile" id="profile">
+                </div>
+…
                 <div>
                     <input type="submit" value="submit" name="submit" id="submit">   
                     Already a Member? <a href="login.php">Sign In</a>

@@ -9,7 +9,10 @@ if (isset($_POST['submit'])) {
     $dob = $_POST['dob'];
     $gender = $_POST['gender'];
     $address = $_POST['address'];
-    $sql = "insert into cus_details (name,password,email,mobile,dob,gender,address) values ('$name','$password','$email','$mobile','$dob','$gender','$address')";
+    $photo="images/";
+    $profile=$photo.$_FILES['profile']['name'];
+    move_uploaded_file($_FILES['profile']['tmp_name'], $photo . $_FILES['profile']['name']);
+    $sql = "insert into cus_details (name,password,email,mobile,dob,gender,address,profile) values ('$name','$password','$email','$mobile','$dob','$gender','$address','$profile')";
     mysqli_query($db, $sql);
     header('location: login.php');
 }

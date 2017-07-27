@@ -15,15 +15,17 @@
         <div id="tab">
             <?php
             $datab = mysqli_connect("localhost", "root", "admin@123", "phpDB");
-            $query = "SELECT name, email , mobile, gender FROM cus_details";
+            $query = "SELECT cus_id,name, email , mobile, gender,profile FROM cus_details";
             $result = mysqli_query($datab, $query);
-            echo "<table width='100%' border='2px'><th>NAME</th><th>EMAIL</th><th>MOBILE</th><th>GENDER</th>";
+            echo "<table width='100%' border='2px'><th>ID</th><th>NAME</th><th>EMAIL</th><th>MOBILE</th><th>GENDER</th><th>PROFILE</th>";
             while ($data = mysqli_fetch_array($result)) {
                 echo '<tr>';
+                 echo '<td>' . $data['cus_id'] . '</td>';
                 echo '<td>' . $data['name'] . '</td>';
                 echo '<td>' . $data['email'] . '</td>';
                 echo '<td>' . $data['mobile'] . '</td>';
                 echo '<td>' . $data['gender'] . '</td>';
+                echo "<td><img src='".$data['profile']."'/></td>";
                 echo '</tr>';
             }
             echo '</table>';
