@@ -1,10 +1,8 @@
 <?php
 session_start();
-if($_SESSION['name'])
-{
+if ($_SESSION['name']) {
     header('location:userinfo.php');
 }
-
 ?>
 <html>
     <head>
@@ -14,14 +12,14 @@ if($_SESSION['name'])
         <link rel="stylesheet" type="text/css" href="cssJquery.css">
         <script src="jquery-3.2.1.min.js"></script>
         <script src="validate.js"></script>
-        
-     
+
+
     </head>
     <body>
         <header>Registration</header>
         <form name="registration"  class="overall" method="post" action="dataBase.php" enctype="multipart/form-data">
-            
-          
+
+
 
             <div class="division">
 
@@ -45,10 +43,10 @@ if($_SESSION['name'])
 
                 <div>
                     <label>DOB:</label> 
-                         
+
                     <input type="date" id="dob" name="dob">
-                     <span class="error_class" id="doberror"></span>
-                    
+                    <span class="error_class" id="doberror"></span>
+
                 </div>
 
                 <div class="Gender">
@@ -57,28 +55,30 @@ if($_SESSION['name'])
                     <span class="error_class" id="gendererror"></span>
                 </div>
 
-                
-                    
-                    
+
+
+
                 <label> Address </label>
                 <div id="subspace">
                     <textarea id="address" cols="30" rows="10" name="address"></textarea>
                     <span class="error_class" id="addresserror"> </span>
                 </div>
                 <div>
-                 <label>Profile:</label>
+                    <label>Profile:</label>
                     <input type="file" name="profile" id="profile">
                 </div>
-…
+                …
                 <div>
                     <input type="submit" value="submit" name="submit" id="submit">   
                     Already a Member? <a href="login.php">Sign In</a>
                 </div>
 
 
-
-                </div>
+            </div>
         </form>
+        <?php
+        include 'footer.php';
+        ?>
 
     </body>
 
