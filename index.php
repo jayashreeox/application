@@ -1,4 +1,11 @@
+<?php
+session_start();
+if($_SESSION['name'])
+{
+    header('location:userinfo.php');
+}
 
+?>
 <html>
     <head>
         <meta charset="UTF-8">

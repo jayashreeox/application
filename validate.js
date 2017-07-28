@@ -7,11 +7,11 @@ $(document).ready(function ()
 
         var name = $("#name").val();
         var name_regex = /^[a-zA-Z]+$/;
-        if (name == "")
-
+        if (name == ""|| !name.match(name_regex))
+ 
         {
             $("#usererror").css("display", "inline");
-            $('#usererror').html("Required field");
+            $('#usererror').html("invalid");
             $("input").focus(function () {
                 $("#usererror").css("display", "none");
             });
@@ -19,13 +19,12 @@ $(document).ready(function ()
         }
 
         var pass = $("#password").val();
-        //var name_regex = /^[a-zA-Z]+$/;
-
+       
         if (pass == "")
 
         {
             $("#passworderror").css("display", "inline");
-            $('#passworderror').html("Required field");
+            $('#passworderror').html("invalid");
             $("input").focus(function () {
                 $("#passworderror").css("display", "none");
             });
@@ -34,13 +33,13 @@ $(document).ready(function ()
 
         var email = $("#email").val();
         var email_regex = /^[A-Za-z0-9._]*\@[A-Za-z]+\.[A-Za-z]{2,5}$/;
-        //var name_regex = /^[a-zA-Z]+$/;
+        
 
         if (email == "" || !email_regex.test(email) )
 
         {
             $("#emailerror").css("display", "inline");
-            $('#emailerror').html("Required field");
+            $('#emailerror').html("invalid");
             $("input").focus(function () {
                 $("#emailerror").css("display", "none");
             });
@@ -55,7 +54,7 @@ $(document).ready(function ()
 
         {
             $("#mobileerror").css("display", "inline");
-            $('#mobileerror').html("Required field");
+            $('#mobileerror').html("invalid");
             $("input").focus(function () {
                 $("#mobileerror").css("display", "none");
             });
@@ -69,7 +68,7 @@ $(document).ready(function ()
 
         {
             $("#doberror").css("display", "inline");
-            $('#doberror').html("Required field");
+            $('#doberror').html("invalid");
             $("input").focus(function () {
                 $("#doberror").css("display", "none");
             });
@@ -77,11 +76,11 @@ $(document).ready(function ()
         }
 
         var gender = $("#gender").val();
-        //var name_regex = /^[a-zA-Z]+$/;
+       
         if ($("#gender:checked").length == 0)
         {
             $("#gendererror").css("display", "inline");
-            $('#gendererror').html("Required field");
+            $('#gendererror').html("invalid");
             $("input").focus(function () {
                 $("#gendererror").css("display", "none");
             });
@@ -89,20 +88,19 @@ $(document).ready(function ()
         }
 
         var address = $("#address").val();
-        //var name_regex = /^[a-zA-Z]+$/;
-
+        
         if (address == "")
 
         {
             $("#addresserror").css("display", "inline");
-            $('#addresserror').html("Required field");
+            $('#addresserror').html("invalid");
             $("textarea").focus(function () {
                 $("#addresserror").css("display", "none");
             });
             return false;
         }
     });
-    $("#name").keyup(function () {
+   $("#name").keyup(function () {
         var name_regex = /^[a-zA-Z]+$/;
         var name = $("#name").val();
         if (!name_regex.test(name))
@@ -122,7 +120,7 @@ $(document).ready(function ()
         if (email = "" || !email_regex.test(email))
         {
             $("#emailerror").css("display", "inline");
-            $("#emailerror").html("..invalid..");
+            $("#emailerror").html("....");
             return false;
         } else
         {
@@ -212,6 +210,6 @@ $(document).ready(function ()
  }
  else{
  $("#dob").hide();
- }
- });*/
+ }*/
+ 
  

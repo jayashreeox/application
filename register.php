@@ -1,3 +1,11 @@
+<?php
+session_start();
+if($_SESSION['name'])
+{
+    header('location:userinfo.php');
+}
+
+?>
 <html>
     <head>
         <title>Application form</title>
